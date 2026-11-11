@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050505">
+  <meta name="color-scheme" content="dark">
+  <title>Vegas Loop · Surge Plan (concept)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="vl-header">
+    <a class="vl-header__brand" href="#"><img src="assets/vegas-loop-wordmark.svg" alt="Vegas Loop" class="vl-wordmark"></a>
+    <nav class="vl-header__nav">
+      <a class="vl-detail">Dispatch</a>
+      <a class="vl-detail is-active">Surge Plan</a>
+      <a class="vl-detail">Stations</a>
+      <a class="vl-detail">Fleet</a>
+      <a class="vl-detail">Hours</a>
+      <span class="vl-header__ops vl-detail"><i></i>OCC · Las Vegas</span>
+    </nav>
+  </header>
+  <main class="layout">
+    <section class="mapcol">
+      <div class="vl-dispatch-map__frame">
+        <canvas id="map"></canvas>
+        <div class="map-hud">
+          <div class="vl-detail" id="hudTime">17:15</div>
+          <div class="legend vl-detail"><span><i class="lg lvcc"></i>LVCC</span><span><i class="lg loop"></i>Loop</span><span><i class="lg q"></i>Queue</span><span><i class="lg c"></i>Idle cars</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="center">
+      <div class="title-row">
+        <div>
+          <div class="vl-detail muted" id="daySub">Surge plan</div>
+          <h1 class="vl-title" id="dayTitle">Convention day</h1>
+        </div>
+        <div class="vl-segmented" id="policy">
+          <button class="vl-segment is-active" data-p="plan">Forecast plan</button>
+          <button class="vl-segment" data-p="history">Historical curve</button>
+          <button class="vl-segment" data-p="flat">Flat</button>
+        </div>
+      </div>
+      <div class="kpis" id="kpis"></div>
+      <div class="vl-card chart-card"><div class="card-h"><span class="vl-detail">Departures per 15 min · <i class="lk" style="background:#4f9cff"></i>forecast <i class="lk" style="background:#fff"></i>actual <i class="lk band"></i>90% band</span><span class="vl-detail muted" id="covNote"></span></div><div id="chartDemand"></div></div>
+      <div class="vl-card chart-card"><div class="card-h"><span class="vl-detail">Cars on duty · <i class="lk" style="background:#fff"></i>forecast plan <i class="lk" style="background:#d3a259"></i>historical curve <i class="lk" style="background:#939393"></i>flat <i class="lk dash"></i>needed</span><span class="vl-detail muted" id="budgetNote"></span></div><div id="chartFleet"></div></div>
+      <div class="vl-card chart-card"><div class="card-h"><span class="vl-detail">p95 wait by hour, min · <i class="lk" style="background:#fff"></i>plan <i class="lk" style="background:#d3a259"></i>historical <i class="lk" style="background:#939393"></i>flat</span><span class="vl-detail muted">target 5 min</span></div><div id="chartWait"></div></div>
+      <div class="scrub vl-card">
+        <button class="vl-btn play" id="play" aria-label="Play">▶</button>
+        <input type="range" id="slider" min="360" max="1439" value="1035">
+        <span class="vl-detail" id="clock">17:15</span>
+      </div>
+    </section>
+    <aside class="sheet" id="sheet"></aside>
+  </main>
+  <footer class="vl-footer vl-detail">Unofficial concept demo by Mohith Gajjela. Not affiliated with The Boring Company. Synthetic data; station locations approximate.</footer>
+  <script src="core.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

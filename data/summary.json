@@ -1,0 +1,134 @@
+{
+  "main": {
+    "targetDay": {
+      "parties": 22022,
+      "riders": 36738,
+      "close": 17,
+      "dayOfShow": 2
+    },
+    "forecast": {
+      "coverage90": 0.915,
+      "cells": 9080,
+      "q": 1.649,
+      "calibScores": 10826
+    },
+    "budgetCars": 120,
+    "driverHours": 2160,
+    "flat": {
+      "p50": 1.6,
+      "p95": 45,
+      "abandoned": 1791,
+      "emptyCarMin": 17840,
+      "carMin": 129600,
+      "egressHourP95": 28.6
+    },
+    "history": {
+      "p50": 1.5,
+      "p95": 36.1,
+      "abandoned": 831,
+      "emptyCarMin": 19109,
+      "carMin": 129922,
+      "egressHourP95": 31.7
+    },
+    "planNoStage": {
+      "p50": 1.3,
+      "p95": 3.7,
+      "abandoned": 0,
+      "emptyCarMin": 23565,
+      "carMin": 129777,
+      "egressHourP95": 5.7
+    },
+    "plan": {
+      "p50": 1.2,
+      "p95": 3.7,
+      "abandoned": 0,
+      "emptyCarMin": 24567,
+      "carMin": 129778,
+      "egressHourP95": 4.9
+    },
+    "minBudget": {
+      "flat": 184,
+      "history": 145,
+      "plan": 117
+    },
+    "savingVsHistory": 0.193,
+    "savingVsFlat": 0.364
+  },
+  "bench": [
+    {
+      "seed": 101,
+      "riders": 38498,
+      "coverage90": 0.911,
+      "historyP95": 32.7,
+      "historyAbandoned": 920,
+      "planP95": 6.5,
+      "planAbandoned": 107,
+      "minBudget": {
+        "flat": 189,
+        "history": 149,
+        "plan": 126
+      },
+      "savingVsHistory": 0.154
+    },
+    {
+      "seed": 312,
+      "riders": 37068,
+      "coverage90": 0.919,
+      "historyP95": 45,
+      "historyAbandoned": 1467,
+      "planP95": 5.1,
+      "planAbandoned": 31,
+      "minBudget": {
+        "flat": 192,
+        "history": 178,
+        "plan": 121
+      },
+      "savingVsHistory": 0.32
+    },
+    {
+      "seed": 523,
+      "riders": 35494,
+      "coverage90": 0.911,
+      "historyP95": 45,
+      "historyAbandoned": 1189,
+      "planP95": 3.3,
+      "planAbandoned": 0,
+      "minBudget": {
+        "flat": 180,
+        "history": 169,
+        "plan": 114
+      },
+      "savingVsHistory": 0.325
+    },
+    {
+      "seed": 734,
+      "riders": 33342,
+      "coverage90": 0.909,
+      "historyP95": 8.5,
+      "historyAbandoned": 304,
+      "planP95": 2.9,
+      "planAbandoned": 0,
+      "minBudget": {
+        "flat": 162,
+        "history": 129,
+        "plan": 109
+      },
+      "savingVsHistory": 0.155
+    },
+    {
+      "seed": 945,
+      "riders": 34129,
+      "coverage90": 0.894,
+      "historyP95": 13.2,
+      "historyAbandoned": 404,
+      "planP95": 3,
+      "planAbandoned": 0,
+      "minBudget": {
+        "flat": 170,
+        "history": 136,
+        "plan": 109
+      },
+      "savingVsHistory": 0.199
+    }
+  ]
+}
